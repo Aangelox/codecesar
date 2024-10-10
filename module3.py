@@ -2,6 +2,7 @@
 # Décoder un message 
 alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 lettre=5
+mess_decode=[]
 mess=input("Quel messsage souhaitez vous décoder ?")  
 c=0
 try: 
@@ -25,4 +26,3 @@ for i in mess:
     mess_decode.append(remplacer)
     i+=1
 print("".join(mess_decode))
-mess_decode=[]
