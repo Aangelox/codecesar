@@ -2,11 +2,13 @@
 # Décoder un message 
 alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 lettre=5
-mess=input("Quel messsage souhaitez vous décoder ?")    
+mess=input("Quel messsage souhaitez vous décoder ?")  
+c=0
 try: 
+    while c==0:
     for i in mess:
         if i in alphabet:
-            pass
+            c=1
         else:
             mess=input("Vous devez entrer des lettres en majuscule !  Message à décoder :")
 except:
