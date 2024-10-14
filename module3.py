@@ -21,3 +21,27 @@ for i in range (0,taille,1):
     remplacer=chr(nouv)
     mess_decode.append(remplacer)
 print("".join(mess_decode))
+
+#########################
+
+#jsp si ton code fonctionne mais personnellement jsuis parti sur quelquqe chose comme ca
+# Décoder un message
+def decodage(caractere,clef):
+  caractere = ord(caractere)
+  if caractere>64 and caractere<91 :
+    caractere_code = chr(caractere-clef)
+  elif caractere>64 and caractere<91 and caractere>(64-clef):
+    caractere_code = chr(caractere-clef+26)
+  elif caractere == 39:
+    caractere_code = chr(caractere)
+  else:
+    print("Erreur dans la saisie du message codé")
+  return caractere_code
+
+def messagedecodage(code,clef):
+  message_decode = ""
+  for i in code:
+    message_decode += decodage(i,clef)
+  return message_decode
+
+print(messagedecodage("PENTALON",1))
