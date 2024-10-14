@@ -22,4 +22,4 @@ def messagecodage(message,decalage):
 
 print(messagecodage("Le message code est incroyablement bien code", 1))
 
-
+#mon code marche nickel pour les sceptiques
