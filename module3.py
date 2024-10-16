@@ -16,8 +16,10 @@ except:
 
 taille=len(mess)
 for i in range (0,taille,1):
-    ord(mess[0+i])
-    nouv=ord(mess[0+i])-lettre
+    if ord(mess[0+i]) >91 and ord(mess[0+i])<33: 
+        nouv=ord(mess[0+i])-lettre + (26-lettre)
+    else : 
+        ord(mess[0+i])
     remplacer=chr(nouv)
     mess_decode.append(remplacer)
 print("".join(mess_decode))
