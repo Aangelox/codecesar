@@ -23,7 +23,7 @@ def messagecodage(message,decalage):
 print(messagecodage("Le message code est incroyablement bien code", 1))
 
 #mon code marche nickel pour les sceptiques
-##jsp si ton code finctiknne du coup mais j'ai fais ça.
+##jsp si ton code fonctionne du coup mais j'ai fais ça.
 
 def codage(message,lettre):
     """
