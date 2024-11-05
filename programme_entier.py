@@ -22,7 +22,6 @@ def lettre_codeuse () :
                 j+=1
         i=i+1
     return (lettre_codeuse, code)
-
 # CODAGE
 def codage(lettre):
     """
@@ -34,17 +33,16 @@ def codage(lettre):
     alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ' "
     message_erreur="Vous devez entrer des lettres en majuscule !  Message à coder :"
     c=0
-    try:
-        while c==0:
+    while c==0:
+        try:
             for i in message:
                 if i in alphabet:
                     c=1
                 else:
                     message=input(message_erreur)
-                    c=0
-    except:
-        message=input(message_erreur)
-        c=0
+        except:
+            message=input(message_erreur)
+            c=0
     taille_message=len(message)
     for i in range (0,taille_message,1):
         if (ord(message[0+i])==32) :
@@ -60,7 +58,6 @@ def codage(lettre):
         message_code.append(nouvelle_lettre)
     message_code="".join(message_code)
     return message_code
-
 # DECODAGE
 def decodage(lettre):
     """
@@ -118,9 +115,8 @@ while c==0:
             coder=input(message_erreur)
     except:
         c=0
-
 if coder =='oui':
-    print(codage(lettre))
+    print("Votre message codé est :",codage(lettre))
 decoder =input("Voulez-vous décoder un message ?")
 c=0
 while c==0:
@@ -132,6 +128,4 @@ while c==0:
     except:
         c=0
 if decoder=='oui':
-    print(decodage (lettre))
-#### 
-#Je ne sais pas si le programme fonctionne correctement en entier. A tester.
+    print("Votre message décodé est :",decodage (lettre))
