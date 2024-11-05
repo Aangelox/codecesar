@@ -20,11 +20,49 @@ def lettre_codeuse () :
     return (lettre_codeuse, code)
 
 # CODAGE
+def codage(lettre):
+    """
+    Permet le codage d'un message à l'aide d'un code César.
+    """
+    message=input("Quel message souhaitez-vous coder ?")
+    message_code=[]
+    alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ' "
+    message_erreur="Vous devez entrer des lettres en majuscule !  Message à coder :"
+    c=0
+    try:
+        while c==0:
+            for i in message:
+                if i in alphabet:
+                    c=1
+                else:
+                    message=input(message_erreur)
+                    c=0
+    except:
+        message=input(message_erreur)
+        c=0
+    taille_message=len(message)
+    for i in range (0,taille_message,1):
+        if (ord(message[0+i])==32) :
+            nouvelle_lettre=' '
+        elif (ord(message[0+i])==39):
+            nouvelle_lettre="'"
+        else :
+            ord(message[0+i])
+            nouvelle_lettre=ord(message[0+i])+lettre
+            if nouvelle_lettre>90:
+                nouvelle_lettre=nouvelle_lettre-26
+            nouvelle_lettre=chr(nouvelle_lettre)
+        message_code.append(nouvelle_lettre)
+    message_code="".join(message_code)
+    return message_code
+#BOUCLE TEST
+for i in range (27):
+    print (i, codage("ABCDEFGHIJK LMN'OPQRSTUVWXYZ",i))
+
 # DECODAGE
-def decodage(lettre):#decalage = de la lettre codeuse
+def decodage(lettre):
     """
     Permet le décodage d'un message codé à l'aide d'un code César.
-    Utilisation : rentrer le message à décoder entre "", puis le numéro de la lettre codeuse.
     """
     message=input("Quel message souhaitez-vous décoder ?")
     message_decode=[]
@@ -65,7 +103,7 @@ def decodage(lettre):#decalage = de la lettre codeuse
 lettre_fonction=lettre_codeuse()
 lettre=lettre_fonction[1]
 print("La lettre codeuse est donc", lettre_fonction[0], "donc le codage est ",lettre_fonction[1],".")
-#Demander si l'utilisateur souahite coder ou décode + demander le message.
+#Demander si l'utilisateur souahite coder ou décoder le message. Si oui, lancer la fonction codage ou decodage.
 message_erreur= "Vous devez répondre par 'oui' ou 'non'"
 coder = input("Voulez-vous coder un message ?")
 c=0
@@ -79,7 +117,7 @@ while c==0:
         c=0
 
 if coder =='oui':
-    print(codage())
+    print(codage(lettre))
 decoder =input("Voulez-vous décoder un message ?")
 c=0
 while c==0:
@@ -93,4 +131,4 @@ while c==0:
 if decoder=='oui':
     print(decodage (lettre))
 #### 
-#Il fat juste créer la fonction qui code et après normalement c'est fini
+#Je ne sais pas si le programme fonctionne correctement en entier. A tester.
