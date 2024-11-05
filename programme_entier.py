@@ -2,6 +2,10 @@
 ##### FONCTIONS
 # LETTRE CODEUSE
 def lettre_codeuse () :
+    """
+    Permet de demander la phrase qui contient la lettre codeuse, et de définir qu'elle est cette dernière.
+    Elle retourne un tuple contenant la lettre codeuse et son nombre associé.
+    """
     alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     phrase=input("Donner la phrase qui constitue la lettre codeuse.")
     phrase=phrase.split(" ")
@@ -23,6 +27,7 @@ def lettre_codeuse () :
 def codage(lettre):
     """
     Permet le codage d'un message à l'aide d'un code César.
+    Elle retourne le message codé.
     """
     message=input("Quel message souhaitez-vous coder ?")
     message_code=[]
@@ -55,14 +60,12 @@ def codage(lettre):
         message_code.append(nouvelle_lettre)
     message_code="".join(message_code)
     return message_code
-#BOUCLE TEST
-for i in range (27):
-    print (i, codage("ABCDEFGHIJK LMN'OPQRSTUVWXYZ",i))
 
 # DECODAGE
 def decodage(lettre):
     """
     Permet le décodage d'un message codé à l'aide d'un code César.
+    Elle retourne le message codé.
     """
     message=input("Quel message souhaitez-vous décoder ?")
     message_decode=[]
