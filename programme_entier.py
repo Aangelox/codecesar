@@ -20,7 +20,6 @@ def lettre_codeuse () :
                 break
             else:
                 j+=1
-        i=i+1
     return (lettre_codeuse, code)
 # CODAGE
 def codage(lettre):
