@@ -96,8 +96,6 @@ def decodage(lettre):
     message_decode="".join(message_decode)
     return message_decode
 
-#FIN DES FONCTIONS
-
 ############# PROGRAMME PRINCIPAL
 #Entrer la phrase codeuse
 lettre_fonction=lettre_codeuse()
@@ -129,3 +127,6 @@ while c==0:
         c=0
 if decoder=='oui':
     print("Votre message décodé est :",decodage (lettre))
+##########
+#Je ne comprends pas pourquoi mais les boucles de test pour les fonctions codage et decodage buggent (elle ne s'arrêtent pas dès que , après un erreur, l'utilisateur
+# ait entré un message en majuscule). Mais jsp pourquoi.
