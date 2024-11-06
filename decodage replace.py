@@ -36,3 +36,4 @@ def decodage(message, lettre):
 #BOUCLE TEST
 for i in range (27):
     print (i, decodage("ABCDEFGHIJK LMN'OPQRSTUVWXYZ",i))
+#J'ai essayé de le faire avec la méthode .replace masi ça ne fonctionne pas.
