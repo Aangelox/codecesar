@@ -1,5 +1,5 @@
 # Créé par Utilisateur, le 13/11/2024 en Python 3.7
-def decodage(decalage):
+def decodage(message, decalage):
     """
     Permet le décodage d'un message codé à l'aide d'un code César.
     Elle retourne le message décodé.
