@@ -81,6 +81,10 @@ def decodage():
     return ''.join(message_decode)
 
 def lettre_codeuse () :
+    """
+    Permet de demander la phrase qui contient la lettre codeuse, et de définir qu'elle est cette dernière.
+    Elle retourne un tuple contenant la lettre codeuse et son nombre associé.
+    """
     alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     phrase=input("Donner la phrase qui constitue la lettre codeuse.")
     phrase=phrase.split(" ")
@@ -99,6 +103,9 @@ def lettre_codeuse () :
     return (lettre_codeuse, code)
 
 def encodagedecodage():
+    """
+    Permet de choisir entre coder ou décoder un message.
+    """
     choix = input('Si vous souhaitez encoder un message, entrez "ENCODAGE" comme ceci, si vous souhaitez décoder un message, entrez "DECODAGE" comme ceci ')
     if choix == "ENCODAGE":
         messagecodage()
