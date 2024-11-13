@@ -14,6 +14,7 @@ def codage(caractere, decalage):
 def messagecodage():
     """
     Permet de coder un message entré par l'utilisateur.
+    Elle retourne le message codé.
     """
     message = input("Entrez le message que vous souhaitez coder")
 
