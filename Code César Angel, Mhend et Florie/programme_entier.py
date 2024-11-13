@@ -18,6 +18,7 @@ def codage(caractere, decalage):
 def messagecodage():
     """
     Permet de coder un message entré par l'utilisateur.
+    Elle retrourne le message codé.
     """
     message = input("Entrez le message que vous souhaitez coder")
 
@@ -71,7 +72,7 @@ def decodage():
 def lettre_codeuse () :
     """
     Permet de demander la phrase qui contient la lettre codeuse, et de définir qu'elle est cette dernière.
-    Elle retourne un tuple contenant la lettre codeuse et son nombre associé.
+    Elle retourne le nombre qui sert de décalage.
     """
     alphabet ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     phrase=input("Donner la phrase qui constitue la lettre codeuse.")
